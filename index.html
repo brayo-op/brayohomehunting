@@ -2,213 +2,118 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>StaySpot - Find Your Next Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login — HomeHunting</title>
   <style>
-    /* General Page Styles */
+    /* ========== YOUR EXISTING STYLES ========== */
     body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f5f7fa;
-      color: #333;
+      padding: 0;
     }
 
-    /* Header */
+    /* Navigation Styles */
     header {
+      background: #2c3e50;
+      padding: 15px 0;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #0077cc;
+    }
+
+    .logo {
       color: white;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      font-weight: 600;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
     }
 
-    header .logo {
-      font-size: 1.5em;
-      font-weight: 700;
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 20px;
     }
 
-    header nav a {
+    .nav-links a {
       color: white;
       text-decoration: none;
-      margin-left: 25px;
-      font-size: 1em;
-      transition: color 0.3s;
     }
 
-    header nav a:hover {
-      color: #ffeb3b;
-    }
-
-    /* Hero Section */
-    .hero {
-      text-align: center;
-      padding: 50px 20px;
-      background: white;
-    }
-
-    .hero h1 {
-      margin: 0;
-      font-size: 2.2em;
-      color: #222;
-    }
-
-    .hero p {
-      color: #555;
-      margin: 10px 0 20px;
-    }
-
-    .hero input {
-      padding: 12px 15px;
-      width: 60%;
+    /* Auth Container */
+    .auth-container {
       max-width: 400px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 1em;
-      outline: none;
-      transition: 0.3s;
-    }
-
-    .hero input:focus {
-      border-color: #0077cc;
-      box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
-    }
-
-    /* Property Grid */
-    .property-grid {
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .property-grid h2 {
-      font-size: 1.8em;
-      margin-bottom: 30px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    /* Property Card */
-    .card {
+      margin: 60px auto;
+      padding: 30px;
       background: white;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-    }
-
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .card h3 {
-      margin: 15px 0 5px;
-      font-size: 1.1em;
-      color: #222;
-    }
-
-    .card p {
-      color: #555;
-      margin-bottom: 15px;
-    }
-
-    /* Footer */
-    footer {
-      background: #daf173;
-      color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       text-align: center;
-      padding: 15px 0;
-      margin-top: 40px;
-      font-size: 0.9em;
+    }
+
+    .auth-container h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .auth-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .auth-container button {
+      width: 100%;
+      padding: 12px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .auth-container button:hover {
+      background: #2980b9;
+    }
+
+    .auth-container a {
+      color: #3498db;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
+ 
 
-  <!-- Header -->
-  <header>
-  <div class="logo">StaySpot</div>
-  <nav class="nav-right">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="help.html">Help</a>
-  </nav>
-</header>
+  <!-- Your existing login form -->
+  <div class="auth-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+  </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Find Your Perfect Rental Home</h1>
-    <p>Discover modern, affordable, and comfortable homes across Kenya.</p>
-    <input type="text" id="search" placeholder="Search location..." />
-  </section>
-
-  <!-- Property Grid -->
-  <section class="property-grid">
-    <h2>Featured Properties</h2>
-    <div class="grid">
-
-      <!-- Row 1 -->
-      <div class="card" onclick="viewDetails(1)">
-        <img src="image/bethsaida1.jpg" alt="Apartment" />
-        <h3>bethsaida apartments</h3>
-      </div>
-
-      <div class="card" onclick="viewDetails(2)">
-        <img src="image/heroes1.jpeg" alt="Villa" />
-        <h3>shekinah apartment</h3>
-      </div>
-
-      <div class="card" onclick="viewDetails(3)">
-        <img src="image/jehova1.jpeg" alt="House" />
-        <h3>Jerusalem flats</h3>
-      </div>
-
-      <!-- Row 2 -->
-      <div class="card" onclick="viewDetails(4)">
-        <img src="image/jerusalem1.jpeg" alt="Loft" />
-        <h3>Heroes apartments</h3>
-      </div>
-
-      <div class="card" onclick="viewDetails(5)">
-        <img src="image/shikina1.jpeg" alt="Condo" />
-        <h3>Jehovah nissi apartments</h3>
-      </div>
-
-      <div class="card" onclick="viewDetails(6)">
-        <img src="image/see1.jpg" alt="Mansion" />
-        <h3>see heart apartment</h3>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    © 2025 StaySpot. All rights reserved.
-  </footer>
-
-  <!-- Script -->
   <script>
-    function viewDetails(id) {
-      window.location.href = `detail.html?id=${id}`;
-    }
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('userEmail', email);
+      window.location.href = 'home.html'; // ✅ Redirect to home.html
+    });
   </script>
 </body>
 </html>
