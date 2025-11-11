@@ -1,0 +1,371 @@
+/* ===================== General Styles ===================== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+/* ===================== Header ===================== */
+/* ===================== Header ===================== */
+/* ===================== Header ===================== */
+header {
+  display: flex;
+  justify-content: space-between; /* pushes nav to right */
+  align-items: center;
+  background-color: #0077cc;
+  color: white;
+  padding: 15px 30px;
+}
+
+/* Logo on left */
+header .logo {
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+/* Nav on right */
+header .nav-right ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+header .nav-right ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+header .nav-right ul li a:hover {
+  color: #ffeb3b;
+}
+
+
+/* ===================== Hero Section ===================== */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: white;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2.2em;
+  color: #222;
+}
+
+.hero p {
+  color: #555;
+  margin: 10px 0 20px;
+}
+
+.hero input {
+  padding: 12px 15px;
+  width: 60%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  outline: none;
+  transition: 0.3s;
+}
+
+.hero input:focus {
+  border-color: #0077cc;
+  box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+}
+
+/* ===================== Property Grid ===================== */
+.property-grid {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.property-grid h2 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ===================== Property Card ===================== */
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0 5px;
+  font-size: 1.1em;
+  color: #222;
+}
+
+.card p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* ===================== Footer ===================== */
+footer {
+  background: #0077cc;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+/* ===================== Login & Signup ===================== */
+.auth-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+}
+
+.auth-container input {
+  width: 90%;
+  padding: 12px 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.auth-container button {
+  padding: 12px 20px;
+  margin-top: 10px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+.auth-container button:hover {
+  background: #005fa3;
+}
+
+.auth-container p {
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+/* ===================== Property Detail Slider ===================== */
+.slider {
+  position: relative;
+  max-width: 800px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.slides img {
+  width: 100%;
+  display: none;
+  border-radius: 15px;
+}
+
+.slides img.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.property-details {
+  max-width: 800px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.property-details h2 {
+  margin-top: 0;
+}
+
+.back {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back a {
+  text-decoration: none;
+  color: white;
+  background: #0077cc;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.back a:hover {
+  background: #005fa3;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header .nav-right {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* ===================== Property Detail Slider ===================== */
+.slider {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.slides img {
+  width: 100%;
+  display: none;
+  border-radius: 15px;
+}
+
+.slides img.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5em;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Property Details Section */
+.property-details {
+  max-width: 800px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.property-details h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  color: #0077cc;
+}
+
+.property-details p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Back Button */
+.back {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+
+.back a {
+  text-decoration: none;
+  color: white;
+  background: #0077cc;
+  padding: 12px 25px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.back a:hover {
+  background: #005fa3;
+}
+
+/* Responsive Slider */
+@media (max-width: 768px) {
+  .slider, .property-details {
+    width: 90%;
+    margin: 30px auto;
+  }
+}
+
+/* ===================== Page Content ===================== */
+.page-content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 25px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  line-height: 1.6;
+}
+
+.page-content h1 {
+  margin-bottom: 20px;
+  color: #0077cc;
+}
+
+.page-content ul {
+  list-style: disc inside;
+  margin-top: 10px;
+}
+

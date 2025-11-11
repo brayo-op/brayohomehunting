@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Property Detail - StaySpot</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">StaySpot</div>
+  <nav class="nav-right">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Slider -->
+<section class="slider">
+  <button class="prev" onclick="prevSlide()">&#10094;</button>
+  <div class="slides"></div>
+  <button class="next" onclick="nextSlide()">&#10095;</button>
+</section>
+
+<!-- Property details -->
+<section class="property-details">
+  <h2 id="property-title"></h2>
+  <p><strong>Location:</strong> <span id="property-location"></span></p>
+  <p><strong>Price:</strong> <span id="property-price"></span></p>
+  <p><strong>Description:</strong> <span id="property-description"></span></p>
+  <p><strong>Amenities:</strong> <span id="property-amenities"></span></p>
+</section>
+
+<div class="back">
+  <a href="index.html">Back to Home</a>
+</div>
+
+<footer>
+  <p>&copy; 2025 StaySpot. All rights reserved.</p>
+</footer>
+
+<script>
+  // Define property data
+  const properties = {
+    1: {
+      title: "Bethsaida",
+      location: "Embu, Kangaru",
+      price: "6500ksh/ month",
+      description: "This luxury apartment offers modern living in the heart of Nairobi. Spacious rooms, fully equipped kitchen, and stunning city views.",
+      amenities: "WiFi, Gym, Parking",
+      images: ["image/bethsaida2.jpeg","image/bethsaida3.jpeg"]
+    },
+    2: {
+      title: "Shekinah apartments",
+      location: "Embu, Kangaru",
+      price: "7000ksh/ month",
+      description: "A charming cottage with sea view and cozy interior. Perfect for small families or couples.",
+      amenities: "WiFi, Garden, Parking",
+      images: ["image/shekina2.jpeg","image/shekina3.jpeg"]
+    },
+    3: {
+      title: "Jerusalem flats",
+      location: "Embu, Kayole",
+      price: "8000ksh/ month",
+      description: "Compact flat for singles or students. Modern furniture and fully equipped kitchen.",
+      amenities: "WiFi, Laundry",
+      images: ["image/jerusalem2.jpeg","image/jerusalem3.jpeg"]
+    },
+    4: {
+      title: "heroes apartments",
+      location: "Embu, Kangaru",
+      price: "10000ksh / month",
+      description: "Spacious loft in the city center with high ceilings and modern decor.",
+      amenities: "WiFi, Gym, Parking",
+      images: ["image/heroe2.jpeg","image/heroes3.jpeg"]
+    },
+    5: {
+      title: "Jehovah nissi",
+      location: "Embu, Kangaru",
+      price: "9000ksh/ month",
+      description: "Perfect for a family. 2 bedrooms, large living area, and private garden.",
+      amenities: "WiFi, Garden, Parking",
+      images: ["image/jehova2.jpeg","image/jevo3.jpeg"]
+    },
+    6: {
+      title: "See heart apartment",
+      location: "Embu, Kangaru",
+      price: "11000ksh / month",
+      description: "Luxurious apartment  with amazing sunset views.",
+      amenities: "WiFi, Garden, Parking",
+      images: ["image/see2.jpg","image/see3.jpg"]
+    }
+  };
+
+  // Get property ID from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const propertyId = urlParams.get('id') || 1; // default to 1
+
+  // Load property data
+  const property = properties[propertyId];
+  document.getElementById("property-title").innerText = property.title;
+  document.getElementById("property-location").innerText = property.location;
+  document.getElementById("property-price").innerText = property.price;
+  document.getElementById("property-description").innerText = property.description;
+  document.getElementById("property-amenities").innerText = property.amenities;
+
+  const slidesContainer = document.querySelector('.slides');
+  property.images.forEach((imgSrc, index) => {
+    const img = document.createElement("img");
+    img.src = imgSrc;
+    if(index === 0) img.classList.add("active");
+    slidesContainer.appendChild(img);
+  });
+
+  // Slider logic
+  let current = 0;
+  const slides = document.querySelectorAll('.slides img');
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+  }
+
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  function prevSlide() {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StaySpot - Find Your Next Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* General Page Styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0077cc;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    header .logo {
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 1em;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #ffeb3b;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: white;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 2.2em;
+      color: #222;
+    }
+
+    .hero p {
+      color: #555;
+      margin: 10px 0 20px;
+    }
+
+    .hero input {
+      padding: 12px 15px;
+      width: 60%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .hero input:focus {
+      border-color: #0077cc;
+      box-shadow: 0 0 5px rgba(0, 119, 204, 0.3);
+    }
+
+    /* Property Grid */
+    .property-grid {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .property-grid h2 {
+      font-size: 1.8em;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* Property Card */
+    .card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px 0 5px;
+      font-size: 1.1em;
+      color: #222;
+    }
+
+    .card p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background: #daf173;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+  <div class="logo">StaySpot</div>
+  <nav class="nav-right">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="help.html">Help</a>
+  </nav>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Find Your Perfect Rental Home</h1>
+    <p>Discover modern, affordable, and comfortable homes across Kenya.</p>
+    <input type="text" id="search" placeholder="Search location..." />
+  </section>
+
+  <!-- Property Grid -->
+  <section class="property-grid">
+    <h2>Featured Properties</h2>
+    <div class="grid">
+
+      <!-- Row 1 -->
+      <div class="card" onclick="viewDetails(1)">
+        <img src="image/bethsaida1.jpg" alt="Apartment" />
+        <h3>bethsaida apartments</h3>
+      </div>
+
+      <div class="card" onclick="viewDetails(2)">
+        <img src="image/heroes1.jpeg" alt="Villa" />
+        <h3>shekinah apartment</h3>
+      </div>
+
+      <div class="card" onclick="viewDetails(3)">
+        <img src="image/jehova1.jpeg" alt="House" />
+        <h3>Jerusalem flats</h3>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="card" onclick="viewDetails(4)">
+        <img src="image/jerusalem1.jpeg" alt="Loft" />
+        <h3>Heroes apartments</h3>
+      </div>
+
+      <div class="card" onclick="viewDetails(5)">
+        <img src="image/shikina1.jpeg" alt="Condo" />
+        <h3>Jehovah nissi apartments</h3>
+      </div>
+
+      <div class="card" onclick="viewDetails(6)">
+        <img src="image/see1.jpg" alt="Mansion" />
+        <h3>see heart apartment</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 StaySpot. All rights reserved.
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function viewDetails(id) {
+      window.location.href = `detail.html?id=${id}`;
+    }
+  </script>
+</body>
+</html>
